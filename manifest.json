@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Jira Issue Number Copier",
+    "version": "1.0",
+    "description": "Copies the Jira issue number of the issue you're viewing to the clipboard.",
+    "permissions": ["activeTab", "scripting", "clipboardWrite"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+      "copy-jira-issue": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+I",
+          "mac": "Command+Shift+I"
+        },
+        "description": "Copy Jira issue number to clipboard"
+      }
+    },
+    "host_permissions": [
+      "*://*.atlassian.net/*",
+      "*://*.jira.com/*"
+    ],
+    "icons": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "64": "icon64.png",
+        "128": "icon128.png"
+    }
+  }
